@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+testbrython
+{% endblock %}
+
+{% block content %}
+
+<h1>TestBrython</h1>
+<body onload="brython()">
+<script src="/brython.js"></script>
+<script type="text/python">
+from browser import document, alert
+
+def echo(ev):
+    alert(document["zone"].value)
+
+document['mybutton'].bind('click',echo)
+</script>
+<input id="zone"><button id="mybutton">click !</button>
+</body>
+<p>jhghgggggggggggggggggggggggggggg  CyberBionic Sistematics, 2015</p>
+
+{% endblock %}
+
+
+
+
